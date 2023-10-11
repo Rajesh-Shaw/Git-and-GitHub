@@ -9,6 +9,7 @@ initialize git-       git init
 
 Git Install
 You can download Git for free from the following website: https://www.git-scm.com/
+after download open .exe file and click next, click next until fishid the installation.
 
 Using Git with Command Line
 To start using Git, we are first going to open up our Command shell.
