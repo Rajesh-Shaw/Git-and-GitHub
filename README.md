@@ -24,4 +24,5 @@ git branch
 git merge
 git remote add origin 
 git push --set-upstream origin master
- 
+git push -u origin master
+git pull
