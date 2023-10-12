@@ -1,0 +1,92 @@
+Topic :
+Git Staging
+git add
+git status
+git add more than one file-  git add --all
+
+
+
+Git Staging
+One of the core functions of Git is the concepts of the Staging Environment, and the Commit.
+
+As you are working, you may be adding, editing and removing files. But whenever you hit a milestone or finish a part of the work, you should add the files to a Staging Environment.
+
+Staged files are files that are ready to be committed to the repository you are working on. You will learn more about commit shortly.
+
+For now, we are done working with index.html. So we can add it to the Staging Environment:
+
+
+$ git add 01  git introduction.txt
+
+
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   01  git introduction.txt
+
+Now the file has been added to the Staging Environment.
+
+
+
+
+
+
+Git Add More than One File
+You can also stage more than one file at a time. Let's add 2 more files to our working folder. Use the text editor again.
+
+A README.md file that describes the repository (recommended for all repositories):
+
+we move two files inside git repo now cheek git status
+
+
+
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   01  git introduction.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        02  git install.txt
+        README.md
+
+
+
+here we see two file are untracked
+ 02  git install.txt
+        README.m
+
+now need to add them or staging them inside repo thats why we use 'git add --all'  or  'git add --A'
+
+
+$ git add --all
+
+Using --all instead of individual filenames will stage all changes (new, modified, and deleted) files.
+
+
+
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   01  git introduction.txt
+        new file:   02  git install.txt
+        new file:   README.md
+
+
+Now all 3 files are added to the Staging Environment, and we are ready to do our first commit.
+
+
+ 
+
