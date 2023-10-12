@@ -1,0 +1,85 @@
+Topic :
+Git Commit
+Git commit without stage
+Git log
+
+
+
+
+Git Commit
+
+Since we have finished our work, we are ready move from stage to commit for our repo.
+
+Adding commits keep track of our progress and changes as we work. Git considers each commit change point or "save point". It is a point in the project you can go back to if you find a bug, or want to make a change.
+
+When we commit, we should always include a message.
+
+
+$ git commit -m "added git introduction, installation, readme.md"
+[master (root-commit) 95a20d1] added git introduction, installation, readme.md
+ 3 files changed, 138 insertions(+)
+ create mode 100644 01  git introduction.txt
+ create mode 100644 02  git install.txt
+ create mode 100644 README.md
+
+
+
+
+The commit command performs a commit, and the -m "message" adds a message.
+The Staging Environment has been committed to our repo, with the message:
+"added git introduction, installation, readme.md"
+
+
+
+Git Commit without Stage
+Sometimes, when you make small changes, using the staging environment seems like a waste of time. It is possible to commit changes directly, skipping the staging environment. The -a option will automatically stage every changed, already tracked file.
+
+Let's add a small update to '02  git install.txt':
+
+ git status --short
+ M "02  git install.txt"
+
+
+Note: Short status flags are:
+?? - Untracked files
+A - Files added to stage
+M - Modified files
+D - Deleted files
+
+
+
+We see the file we expected is modified. So let's commit it directly:
+
+$ git commit -a -m "Updated 02  git install.txt with a new line"
+[master d82e89b] Updated 02  git install.txt with a new line
+ 1 file changed, 1 insertion(+)
+
+
+
+
+
+
+Warning: Skipping the Staging Environment is not generally recommended.
+Skipping the stage step can sometimes make you include unwanted changes.
+
+
+Git Commit Log
+To view the history of commits for a repository, you can use the log command:
+
+
+$ git log
+commit d82e89b992ec12e8690d915a479114384f4efcf8 (HEAD -> master)
+Author: Rajesh-Shaw <rkshawxxxx@gmail.com>
+Date:   Wed Oct 11 10:50:59 2023 +0530
+
+    Updated 02  git install.txt with a new line
+
+commit 95a20d1952fe2f496fbe72e95b2aeb74d40ce8e2
+Author: Rajesh-Shaw <rkshawxxxx@gmail.com>
+Date:   Wed Oct 11 10:43:23 2023 +0530
+
+    added git introduction, installation, readme.md
+
+
+
+
