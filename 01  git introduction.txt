@@ -7,7 +7,6 @@ What is GitHub?
 
 
 
-
 What is Git?
 	Git is a version control system.
 	Git helps you keep track of code changes,
@@ -30,7 +29,7 @@ what does git do ?
 
 
 
-Working with Git....
+Working with Git.....
 
 	Initialize Git on a folder, making it a Repository
 	Git now creates a hidden folder to keep track of changes in that folder
@@ -40,7 +39,6 @@ Working with Git....
 	Git allows you to see the full history of every commit.
 	You can revert back to any previous commit.
 	Git does not store a separate copy of every file in every commit, but keeps track of changes made in each commit!
-
 
 
 
