@@ -1,0 +1,139 @@
+Topic :
+git help
+git commit -help
+git help --all
+
+
+
+
+Git Help
+If you are having trouble remembering commands or options for commands, you can use Git help.
+There are a couple of different ways you can use the help command in command line:
+
+git command -help -  See all the available options for the specific command
+git help --all -  See all possible commands
+
+
+
+
+$ git commit -help
+usage: git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
+                  [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)]
+                  [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+                  [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+                  [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+                  [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+                  [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]]
+                  [--] [<pathspec>...]
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Git help --all See All Possible Commands
+To list all possible commands, use the help --all command:
+
+Warning: This will display a very long list of commands
+
+
+
+git help --all
+See 'git help <command>' to read about a specific subcommand
+
+Main Porcelain Commands
+   add                     Add file contents to the index
+   am                      Apply a series of patches from a mailbox
+   archive                 Create an archive of files from a named tree
+   bisect                  Use binary search to find the commit that introduced a bug
+   branch                  List, create, or delete branches
+   bundle                  Move objects and refs by archive
+   checkout                Switch branches or restore working tree files
+   cherry-pick             Apply the changes introduced by some existing commits
+   citool                  Graphical alternative to git-commit
+   clean                   Remove untracked files from the working tree
+   clone                   Clone a repository into a new directory
+   commit                  Record changes to the repository
+   describe                Give an object a human readable name based on an available ref
+   diff                    Show changes between commits, commit and working tree, etc
+   fetch                   Download objects and refs from another repository
+   format-patch            Prepare patches for e-mail submission
+   gc                      Cleanup unnecessary files and optimize the local repository
+   gitk                    The Git repository browser
+   grep                    Print lines matching a pattern
+   gui                     A portable graphical interface to Git
+   init                    Create an empty Git repository or reinitialize an existing one
+   log                     Show commit logs
+   maintenance             Run tasks to optimize Git repository data
+   merge                   Join two or more development histories together
+   mv                      Move or rename a file, a directory, or a symlink
+   notes                   Add or inspect object notes
+   pull                    Fetch from and integrate with another repository or a local branch
+   push                    Update remote refs along with associated objects
+   range-diff              Compare two commit ranges (e.g. two versions of a branch)
+   rebase                  Reapply commits on top of another base tip
+:
+
+
+
+
+
+
+Note: If you find yourself stuck in the list view, SHIFT + G to jump the end of the list, then q to exit the view.

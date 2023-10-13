@@ -1,0 +1,22 @@
+Topic :
+Git Branch merge
+
+
+
+merge branchs
+First, we need to change to the master branch:
+
+git checkout master
+Switched to branch 'master'
+
+we marge the installation steps with master
+
+$ git marge installation
+git: 'marge' is not a git command. See 'git --help'.
+
+The most similar command is
+        merge
+
+
+
+Now we have a better understanding of how branches and merging works. Time to start working with a remote repository!

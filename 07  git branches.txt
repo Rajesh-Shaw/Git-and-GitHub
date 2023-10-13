@@ -1,0 +1,103 @@
+Topic :
+git branch
+git checkout
+
+
+Git Branches :
+
+Working with Git Branches
+In Git, a branch is a new/separate version of the main repository.
+
+Branches allow you to work on different parts of a project without impacting the main branch.
+When the work is complete, a branch can be merged with the main project.
+
+You can even switch between branches and work on different projects without them interfering with each other.
+
+Branching in Git is very lightweight and fast!
+
+
+
+
+New Git Branch
+Let add some new features to our '01 git instal.txt' page.
+
+We are working in our local repository, and we do not want to disturb or possibly wreck the main project.
+So we create a new branch:
+
+$ git branch installation
+
+Now we created a new branch called "hello-world-images"
+Let's confirm that we have created a new branch:
+
+$ git branch
+  installation
+* master
+
+
+
+
+We can see the new branch with the name "installation", but the * beside master specifies that we are currently on that branch.
+
+checkout is the command used to check out a branch. Moving us from the current branch, to the one specified at the end of the command:
+
+
+$ git checkout installation
+Switched to branch 'installation'
+
+
+Now we have moved our current workspace from the master branch, to the new branch
+Open editor and make some changes in '02 git install.txt .
+
+
+
+We have made changes to a file and added a new file in the working directory (same directory as the main branch).
+Now check the status of the current branch:
+
+
+
+
+$ git status
+On branch installation
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   02  git install.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+So let's go through what happens here:
+There are changes to our '02  git install.txt', but the file is not staged for commit
+'02  git install.txt' is not tracked
+So we need to add the file to the Staging Environment for this branch:
+
+$ git add --all
+
+
+$ git status
+On branch installation
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   02  git install.txt
+
+
+
+We are happy with our changes. So we will commit them to the branch:
+
+$ git commit -m "added installation steps"
+[installation ee00c70] added installation steps
+ 1 file changed, 16 insertions(+)
+
+
+Now we have a new branch, that is different from the master branch.
+
+Now, let's see what happens when we change branch to master
+
+$ git checkout master
+Switched to branch 'master'
+
+
+what we are change in previous branch thats are not available in this branch
+
+
+ 
