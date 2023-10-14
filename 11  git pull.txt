@@ -1,0 +1,176 @@
+Topic :
+git pull
+git fetch
+
+
+
+
+Git Pull from GitHub
+Pulling to Keep up-to-date with Changes
+
+When working as a team on a project, it is important that everyone stays up to date.
+Any time you start working on a project, you should get the most recent changes to your local copy.
+
+With Git, you can do that with pull.
+pull is a combination of 2 different commands:
+fetch
+merge
+
+Let's take a closer look into how fetch, merge, and pull works.
+
+
+
+Git Fetch
+
+fetch gets all the change history of a tracked branch/repo.
+So, on your local Git, fetch updates to see what has changed on GitHub:
+
+
+$ git fetch origin
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 733 bytes | 3.00 KiB/s, done.
+From https://github.com/Rajesh-Shaw/Git-and-GitHub.git
+   e0b6038..d29d69f  master     -> origin/master
+
+
+
+
+Now that we have the recent changes, we can check our status:
+
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+
+
+
+
+
+We are behind the origin/master by 1 commit. That should be the updated README.md, but lets double check by viewing the log :
+
+$ git log origin/master
+commit 01bac1d65d3a6f3b09017f4aaf0bf868f2975cba (origin/master)
+Author: Rajesh-Shaw <141168545+Rajesh-Shaw@users.noreply.github.com>
+Date:   Wed Oct 11 17:44:44 2023 +0530
+
+    Update README.md
+
+    added git command
+
+commit d82e89b992ec12e8690d915a479114384f4efcf8
+Author: Rajesh-Shaw <rkshaw5300@gmail.com>
+Date:   Wed Oct 11 10:50:59 2023 +0530
+
+    Updated 02  git install.txt with a new line
+
+commit 95a20d1952fe2f496fbe72e95b2aeb74d40ce8e2
+Author: Rajesh-Shaw <rkshaw5300@gmail.com>
+Date:   Wed Oct 11 10:43:23 2023 +0530
+
+    added git introduction, installation, readme.md
+
+
+
+
+
+
+
+
+
+That looks as expected, but we can also verify by showing the differences between our local master and origin/master:
+
+
+
+$ git diff origin/master
+diff --git a/03  add new files inside empty git repo.txt b/03  add new files inside empty git repo.txt
+new file mode 100644
+index 0000000..b161898
+--- /dev/null
++++ b/03  add new files inside empty git repo.txt
+@@ -0,0 +1,47 @@
++Topic :
++add new file inside empty git repo
++git status
++
++
++
++Git Adding New Files
++You just created your first local Git repo. But it is empty.
++
++So let's add some files, or create a new file using your favourite text editor. Then save or move it to the folder you just created.
++
+----------------------------------
+------------------------------
+-----------------------------
+
+
+
+
+
+
+Git Merge
+
+merge combines the current branch, with a specified branch.
+We have confirmed that the updates are as expected, and we can merge our current branch (master) with origin/master:
+
+
+$ git merge origin/master
+Merge made by the 'ort' strategy.
+ README.md | 32 ++++++++++++++++++++++++--------
+ 1 file changed, 24 insertions(+), 8 deletions(-)
+
+
+
+
+Check our status again to confirm we are up to date:
+
+git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+
+
+
+
+
+
+Git Pull
+But what if you just want to update your local repository, without going through all those steps?
+
+pull is a combination of fetch and merge. It is used to pull all changes from a remote repository into the branch you are working on.
+
+Make another change to the Readme.md file on GitHub.
+
+
+
+
+
+
+
+Use pull to update our local Git:
+
+$ git pull origin
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 696 bytes | 63.00 KiB/s, done.
+From https://github.com/Rajesh-Shaw/Git-and-GitHub
+   01bac1d..3a3570a  master     -> origin/master
+Merge made by the 'ort' strategy.
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+
+
+That is how you keep your local Git up to date from a remote repository. In the next chapter, we will look closer at how push works on GitHub.
+
