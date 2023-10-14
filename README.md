@@ -9,9 +9,10 @@ how git repo create?
 how repos are staging
 how repos are added
 how repo are commited
-how repos are put in github  and many more..
+how repos are put in github and many more..
 
-# Git Command 
+# Git Command
+
 git init
 git status
 git diff
@@ -22,7 +23,9 @@ git log
 git help
 git branch
 git merge
-git remote add origin 
+git remote add origin
 git push --set-upstream origin master
 git push -u origin master
 git pull
+git checkout Branch_Name
+git checkout -b Branche_Name
