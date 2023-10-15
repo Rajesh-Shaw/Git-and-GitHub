@@ -1,0 +1,86 @@
+
+
+Pulling a Branch from GitHub
+Now continue working on our new branch in our local Git.
+
+Lets pull from our GitHub repository again so that our code is up-to-date:
+
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 712 bytes | 50.00 KiB/s, done.
+From https://github.com/Rajesh-Shaw/Git-and-GitHub
+ * [new branch]      git-exercise -> origin/git-exercise
+Already up to date.
+
+
+
+
+
+Now our main branch is up todate. And we can see that there is a new branch available on GitHub.
+
+Do a quick status check:
+
+
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+
+And confirm which branches we have, and where we are working at the moment:
+$ git branch
+  installation
+* master
+
+
+
+
+So, we do not have the new branch on our local Git. But we know it is available on GitHub. So we can use the -a option to see all local and remote branches:
+
+$ git branch -a
+  installation
+* master
+  remotes/origin/git-exercise
+  remotes/origin/master
+
+Note: branch -r is for remote branches only.
+
+
+
+We see that the branch git-exercise is available remotely, but not on our local git. Lets check it out:
+
+$ git checkout git-exercise
+Switched to a new branch 'git-exercise'
+branch 'git-exercise' set up to track 'origin/git-exercise'.
+
+
+
+And check if it is all up to date:
+
+$ git pull
+Already up to date.
+
+
+
+
+Which branches do we have now, and where are we working from?
+
+$ git branch
+* git-exercise
+  installation
+  master
+
+
+Now, open the favourite editor and confirm that the changes from the GitHub branch carried over.
+
+That is how you pull a GitHub branch to your local Git.
+
+
+
+

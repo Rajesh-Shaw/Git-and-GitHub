@@ -1,0 +1,60 @@
+Topic :
+git push
+
+
+Push Changes to GitHub
+Let's add one more file to our local git and pushing them to GitHub.
+
+$ git add --all
+
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   05  git commit.txt
+
+
+
+Commit the changes:
+$ git commit -m "added git commit file"
+[master 4954b48] added git commit file
+ 1 file changed, 85 insertions(+)
+ create mode 100644 05  git commit.txt
+
+
+
+
+And check the status:
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+
+
+
+
+Now push our changes to our remote origin:
+
+$ git push origin
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 3.50 KiB | 1.75 MiB/s, done.
+Total 11 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/Rajesh-Shaw/Git-and-GitHub.git
+   3a3570a..4954b48  master -> master
+
+
+
+
+
+Go to GitHub, and confirm that the repository has a new commit.
+Now, we are going to start working on branches on GitHub.

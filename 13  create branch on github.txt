@@ -1,0 +1,25 @@
+Topic :
+
+create a new Branch :
+On GitHub, access your repository and click the "master" branch button.
+There you can create a new Branch. Type in a descriptive name, and click Create branch:
+
+
+
+The branch should now be created and active. You can confirm which branch you are working on by looking at the branch button. See that it now says "git-exercise" instead of "master"?
+
+
+
+
+Start working on any existing file in this branch. Click the any file and start editing:
+
+
+After you have finished editing the file, you can click the "Preview changes" tab to see the changes you made highlighted:
+
+
+
+If you are happy with the change, add a comment that explains what you did, and click Commit changes.
+
+You now have a new branch on GitHub, updated with some changes!
+
+
