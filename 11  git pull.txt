@@ -172,5 +172,5 @@ Merge made by the 'ort' strategy.
 
 
 
-That is how you keep your local Git up to date from a remote repository. In the next chapter, we will look closer at how push works on GitHub.
+That is how you keep your local Git up to date from a remote repository. now, we will look closer at how push works on GitHub.
 
