@@ -1,0 +1,5 @@
+Fork a Repository
+A fork is a copy of a repository. This is useful when you want to contribute to someone else's project or start your own project based on theirs.
+
+fork is not a command in Git, but something offered in GitHub and other repository hosts. Let's start by logging in to GitHub, and fork our repository:
+https://github.com/Rajesh-Shaw/Git-and-GitHub
